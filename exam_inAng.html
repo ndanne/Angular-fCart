@@ -1,99 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Online Exam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="exam-styles.css" rel="stylesheet">
 <link href="blue.css" rel="stylesheet">
-<style>
-html {
-    font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
-}
-.main{
-	width: 1170px;
-	margin: auto 50px;	
-	padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;	
-}
-#test_status {	
-	height: 20px;
-	display: block;
-}
-div.test{ 
-	min-width: 960px;
-	position: relative;
-	border-top:#dedede 1px solid;	
-	padding:10px 20px 20px 20px;
-	background-color: #ffffff;
-}
-/*.test.even{
-	background-color: #FFFF99;
-}
-.test.odd{
-	background-color: #ADD8E6;
-}*/
-.test label{
-	display: block;
-	margin: 0 5px; 
-	padding: 5px;
-	cursor: pointer;
-	border:#dedede 1px solid transparent;
-	
-}
-.test p{
-	font-weight: 300;
-    line-height: 1.4;
-}
-label:hover {
-    color: #333;
-    background-color: #e6e6e6;
-    border-color: #adadad;
-}
-.ques{
-border-top:#fff 1px solid;
-padding: 2px;
-}
-.btn{
-	padding: 6px 12px;
-	font-size: 14px;
-	text-align: center;
-	cursor: pointer;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    color: #fff;
-    background-color: #337ab7;
-}
-.btn[disabled], .btn.disabled {
-	cursor: not-allowed;
-	-webkit-box-shadow: none;
-	filter: alpha(opacity=65);
-    box-shadow: none;
-    opacity: .65;
-}
-</style>
 
 </head>
 <body ng-app="myExam">
-<div class="main" ng-controller="examQusController as exam">
-<h2 id="test_status" ng-bind="test_status"></h2>
-<div class="test" ng-class-even="'even'" ng-class-odd="'odd'" ng-repeat="ques in questions | startFrom:currentPage*pageSize | limitTo: pageSize">	
-	<h3>{{ques.question}}</h3>
-	<p ng-if="ques.senior">{{ques.senior}}</p>	
-	<div ng-repeat="option in ques.options">
-	<label> <input type='radio' name='choices{{$parent.$index}}' ng-model="choices.Selected" ng-click="exam.checkAnswer($index, choices)" value='A'> {{option}}</label>
-	</div>
-	<!--<label>B. <input type='radio' name='choices{{$index}}' ng-model="choices.Selected" ng-click="exam.checkAnswer($index, choices)" value='B'> {{ques.chB}}</label>
-	<label ng-if="ques.chC">C. <input type='radio' name='choices{{$index}}' ng-model="choices.Selected" ng-click="exam.checkAnswer($index, choices)" value='C'> {{ques.chC}}</label>
-	<label ng-if="ques.chD">D. <input type='radio' name='choices{{$index}}' ng-model="choices.Selected" ng-click="exam.checkAnswer($index, choices)" value='D'> {{ques.chD}}</label>-->
-</div>
+<div class="main" >
+<side-bar></side-bar>
+<div class="test" ng-controller="examQusController as exam"> 
+<h1 id="test_status" ng-bind="test_status"></h1>
+<test-dir></test-dir>
  <button ng-disabled="currentPage == 0" class="btn" ng-click="currentPage=currentPage-1">
         Previous
     </button>
@@ -102,15 +23,11 @@ padding: 2px;
         Next
     </button>
 </div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script type="text/javascript" src="angular.js"></script>
+</div>
+<script type="text/javascript" src="jquery.min-2.2.4.js"></script>
+<script type="text/javascript" src="angularv1.4.js"></script>
+
 <script type="text/javascript" src="myExam.js"></script>
-<script type="text/javascript" src="icheck.min.js"></script>
-<script type="text/javascript">
-	$('input').iCheck({
-	  labelHover: false,
-	  cursor: true
-	});
-</script>
+
 </body>
 </html>
