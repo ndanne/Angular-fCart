@@ -1,0 +1,9 @@
+<div ng-class-even="'even'" ng-repeat="ques in questions | startFrom:currentPage*(pageSize-1)  | limitTo:pageSize ">	
+	<h2>{{ques.question}}</h2>
+	<p ng-if="ques.senior">{{ques.senior}}</p>	
+	<div class="options-bloc" ng-repeat="option in ques.options">
+	<label> 
+	<input type='checkbox' name='choices{{$parent.$index}}' ng-model="choices.Selected" ng-click="isAnswered($parent.$index, choices)"> {{option}}</label>
+	</div>
+	<p ng-show='!!result' class="alert {{ isCorrect($index) == 'correct'? 'alert-success': 'alert-danger'}}">Your answer is {{isCorrect(question)}}.</p>
+</div>

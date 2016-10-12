@@ -1,0 +1,113 @@
+[
+    {
+        "qusId": 1,
+        "question": "Are you ready for exam?",
+        "senior": null,
+        "options": {
+            "A": "Yes",
+            "B": "No"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "A"
+    },
+    {
+        "qusId": 2,
+        "question": "What is 10 + 4?",
+        "senior": null,
+        "options": {
+            "A": "12",
+            "B": "14",
+            "C": "16"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "B"
+    },
+    {
+        "qusId": 3,
+        "question": "What is 20 - 9?",
+        "senior": null,
+        "options": {
+            "A": "9",
+            "B": "14",
+            "C": "11",
+            "D": "13"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "C"
+    },
+    {
+        "qusId": 4,
+        "question": "What is 7 x 3?",
+        "senior": null,
+        "options": {
+            "A": "12",
+            "B": "21",
+            "C": "24",
+            "D": "36"
+        },
+        "answer": "A"
+    },
+    {
+        "qusId": 5,
+        "question": "What is 8 / 2?",
+        "senior": null,
+        "options": {
+            "A": "2",
+            "B": "8",
+            "C": "4"
+        },
+        "answer": "C"
+    },
+    {
+        "qusId": 6,
+        "question": "What is sq-root 12?",
+        "senior": "This shold be calculate like 12*12",
+        "options": {
+            "A": "155",
+            "B": "122",
+            "C": "55",
+            "D": "144"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "A"
+    },
+    {
+        "qusId": 7,
+        "question": "What is LMC of 8, 6, 14?",
+        "senior": "2*4*3*7",
+        "options": {
+            "A": "168",
+            "B": "144",
+            "C": "120",
+            "D": "84"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "A"
+    },
+    {
+        "qusId": 8,
+        "question": "What is Trigonometry?",
+        "senior": null,
+        "options": {
+            "A": "Trigonometry is a branch of mathematics that studies relationships involving lengths and angles of triangles",
+            "B": "It Deal with all geometric shapes like square, cube, Rectangle, circle & etc..",
+            "C": "mathos method to cal",
+            "D": "All the above"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "A"
+    },
+    {
+        "qusId": 9,
+        "question": "What is Alzebra?",
+        "senior": null,
+        "options": {
+            "A": "All Gebra Meeting at once place",
+            "B": "Mathematics beyond the basic principles of arithmetic",
+            "C": "Why you want this Answer?",
+            "D": "None of above"
+        },
+        "QuestionType": "multipleRadio",
+        "answer": "A"
+    }
+]

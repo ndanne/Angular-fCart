@@ -1,0 +1,227 @@
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    /* font-size: 16px;*/
+}
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    /*color: #333;
+    background-color: #fff;*/
+
+    background: #e8ebec;
+    color: #575a5b;
+}
+h1{
+    font-size: 185%;
+    line-height: 1.3;
+    border-bottom: 1px solid #ddd;
+    color: #21abc7;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+h1.header-title {
+    color: #575a5b;
+    font-size: 130%;
+    font-weight: 300;
+}
+/**/
+h2 {
+   
+    border-width: 2px;
+    font-size: 175%;
+    line-height: 1.3;
+    margin: 0;
+    padding-bottom: 10px;
+}
+.main{
+	width: 1024px;
+	margin: auto 50px;	
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;	
+}
+.header {    
+    box-sizing: border-box;
+    height: 60px;
+    left: 0;
+    line-height: 60px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 130;
+}
+.main::after{
+clear: both;
+    content: "";
+    display: table;
+}
+.courseBar {
+    /*overflow: visible;*/
+    background: #fff;
+    color: #575a5b;
+    top: 0;
+}
+
+.profile{
+    width: 200px;
+    margin: auto 10px;  
+    padding: 10px;
+    position: fixed;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+/**/
+#test_status {	
+	height: 20px;
+	display: block;
+}
+div.test{ 
+    margin-left: auto;
+    margin-right: auto;
+	min-width: 750px;
+	max-width: 860px;
+	position: relative;
+	border-top:#dedede 1px solid;	
+	padding:10px 20px 20px 20px;
+	background-color: #ffffff;
+     border-bottom: 1px solid #ddd;
+    margin-bottom: 40px;
+        background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+     float: right;
+}
+/*.test.even{
+	background-color: #FFFF99;
+}
+.test.odd{
+	background-color: #ADD8E6;
+}*/
+.test label{
+	display: block;
+	margin: 5px; 
+	padding: 5px;
+	cursor: pointer;
+	border:#dedede 1px solid transparent;
+	
+}
+.test p{
+	color: #575a5b;
+	font-weight: 300;
+    line-height: 1.4;
+}
+.option-block {
+	    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.option-block:selection{
+	background: #e8ebec;
+    color: #575a5b;
+}
+label{
+	background: #dee1e1;
+	border: 0;
+    color: #575a5b;
+    display: block;
+}
+label:hover {     
+    border-color: #575a5b;
+        color: #575a5b;
+    /*background-color: #e6e6d5;*/
+    border-color: #adadad;
+}
+label.correctAns{
+	background: #c6e8cb;
+    color: #575a5b;
+}
+label.incorect{
+	background: #efc2b5;
+    color: #b24626;
+}
+.error-msg {
+	background: #fdf6f4;
+    border: 1px solid #e28e76;
+    border-radius: 3px;
+    color: #b24626;
+    margin-top: 10px;
+    padding: 10px;
+}
+.ques{
+border-top:#fff 1px solid;
+padding: 2px;
+}
+.btn{
+	padding: 6px 12px;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #337ab7;
+
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.btn-success{
+	padding-left: 40px;
+    padding-right: 40px;
+    vertical-align: text-bottom;
+    background: #59bc69;
+}
+.btn[disabled], .btn.disabled {
+	cursor: not-allowed;
+	-webkit-box-shadow: none;
+	filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: .65;
+}
+
+/* Include this file in your html if you are using the CSP mode. */
+
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
+.ng-animate-block-transitions {
+  transition:0s all!important;
+  -webkit-transition:0s all!important;
+}
+
+/* show the element during a show/hide animation when the
+ * animation is ongoing, but the .ng-hide class is active */
+.ng-hide-add-active, .ng-hide-remove {
+  display: block!important;
+}
+.alert{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+.alert-success{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-danger{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
