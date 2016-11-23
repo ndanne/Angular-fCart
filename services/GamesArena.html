@@ -1,0 +1,16 @@
+<div class="clearfix">		
+	
+		<article class="col-md-5 gameBox" ng-repeat="game in gamectrl.gamesArena | filter : searchtitle | startFrom:gamectrl.currentPage*(gamectrl.pageSize-1)  | limitTo:gamectrl.pageSize">
+		<div class="pull-left">
+			<img ng-src="images/LitleBigPlanet.jpg" alt="{{game.title}}">
+		</div>
+		<div class="pull-left">
+			<h3 class="gamTitle"><a href="games/{{gamectrl.game_id}}"> {{game.title}}</a></h3>
+			<p>{{game.platform}}</p>
+		</div>	
+			<div class="clearfix col-md-12 gemfooter">
+				<span>{{game.genre}}  - </span><span>{{game.score}}</span>
+			</div>
+		</article>
+		
+		</div>

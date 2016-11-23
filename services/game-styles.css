@@ -1,0 +1,24 @@
+.maintitle{
+	line-height: 3;
+	color: #A1C01D;
+	font-size: 20px;
+}
+.conterntBox{
+	background-color: #f0f0f0;
+	padding: : 10px;
+}
+.searchArea{
+	padding: 50px 0;
+}
+.gameBox{
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #c0c0c0;
+}
+.gamTitle{
+	color:#7A7A7A;
+	font-size: 20px;
+}
+.gemfooter{
+	color:#FFA759;
+}
