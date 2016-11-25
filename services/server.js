@@ -4,8 +4,9 @@ var bodyParser  = require("body-parser");
 //var md5 = require('MD5');
 var rest = require("./REST.js");
 var app  = express();
-
+var path = require('path');
 var port = process.env.PORT || 3000;
+var rootPath = path.normalize(__dirname + '/');
 function REST(){
     var self = this;
     self.connectMysql();
@@ -50,6 +51,8 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
+      app.use(express.static(rootPath+'/'));
+      app.get('*', function(req, res){ res.sendFile(rootPath+'/index.html')})
       app.listen(port, function(){
           console.log("All right ! I am alive at Port 3000.");
       });
