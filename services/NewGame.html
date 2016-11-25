@@ -1,0 +1,35 @@
+<div class="clearfix">
+	<article class="col-md-6 col-md-offset-2 gameBox" ng-controller="NewGameCtrl">
+		
+		<h3 class="gamTitle">Enter new Game Creation</h3>
+			<form name="newGameForm" method="post">
+			<fieldset>
+			<div class="form-group">
+				<label for="gameName">Game Title</label>
+				<input type="text" ng-model="game.gameTitle" required class="form-control" name="gameTitle" value="">
+			</div>
+			<div class="form-group">
+				<label for="platform">Platform</label>
+				<input type="text" ng-model="game.platform" required class="form-control" name="platform" value="">
+			</div>
+			<div class="form-group">
+				<label for="score">Score</label>
+				<input type="number" ng-model="game.score" required class="form-control" name="score" max="10" value="">
+			</div>
+			<div class="form-group">
+				<label for="genre">Genre</label>
+				<input type="text" ng-model="game.genre" required class="form-control" name="genre" value="">
+			</div>
+			<div class="form-group">
+				<label for="editors_choice">Editors Choice</label>
+				<input type="text" ng-model="game.editors_choice" class="form-control" name="editors_choice" value="">
+			</div>	
+			
+			<div class="form-group">
+				<button type="submit" ng-disabled="newGameForm.$invalid" ng-click="saveGame(game, newGameForm)" class="btn btn-primary">Submit</button>
+				<button type="button" ng-click="cancelBtn()" class="btn btn-danger">Cancel</button>
+			</div>	
+			</fieldset>
+			</form>
+	</article>
+</div>
